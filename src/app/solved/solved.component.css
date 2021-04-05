@@ -1,0 +1,22 @@
+#wrap {
+    max-width: 1200px;
+    min-width: 800px;
+    width: 90%;
+    height: 800px;
+    margin: 0 auto;
+    background: #e9e6e2;
+    /*background-repeat: no-repeat;*/
+}
+
+
+/*上下排列，问问题的标题*/
+
+#div2a {
+    padding-top: 30%;
+    height: 100%;
+    color: green;
+    font-size: 50px;
+    font-style: italic;
+    text-align: center;
+    vertical-align: middle;
+}

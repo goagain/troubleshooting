@@ -33,7 +33,18 @@ export const TS_Machine = Machine({
                 [TS_EVENTS.CONFIRM]: TS_STATES.ETHERNET_OR_WIFI
             },
             meta: {
-                message: 'Welcome to Network TroubleShooting System, hope we can solve your problem.'
+                message: 'Welcome to Network TroubleShooting System, hope we can solve your problem.',
+                pictures: [
+                    {
+                        img: "1.png"
+                    },
+                    {
+                        img: "1.png"
+                    }, 
+                    {
+                        img: "1.png"
+                    },
+                ]
             }
         },
         [TS_STATES.ETHERNET_OR_WIFI]: {
@@ -51,7 +62,7 @@ export const TS_Machine = Machine({
                 [TS_EVENTS.NO]: TS_STATES.OTHER_CANNOT_CONNECT,
             },
             meta: {
-                message: 'Can you access the internet from other divices through Ethernet cable or wifi?'
+                message: 'Can you access the internet from other devices through Ethernet cable or wifi?'
             }
         },
         [TS_STATES.OTHER_CAN_CONNECT]: {
@@ -60,7 +71,7 @@ export const TS_Machine = Machine({
                 [TS_EVENTS.NO]: TS_STATES.COMPUTER_PROBLEM,
             },
             meta: {
-                message: 'Well, seems you have a problem with the Enthernet cable, please try to unplug and plug the cable,  this not work, use another cable. Can you access the internet now?'
+                message: 'Well, seems you have a problem with the Enthernet cable, please try to unplug and plug the cable,if this doesn\'t work, try a new cable. Can you access the internet now?'
             }
         },
         [TS_STATES.COMPUTER_PROBLEM]: {
@@ -69,13 +80,13 @@ export const TS_Machine = Machine({
                 [TS_EVENTS.NO]: TS_STATES.NEED_ASSISTANT
             },
             meta: {
-                message: `You might have problem with your computer, this can be cause by Network Interface Card, or fire wall, or computer virus,etc. Could try these steps:  
-                1. Restart browser or computer. 
+                message: `You might have problem with your computer, this can be cause by Network Interface Card, or fire wall, or computer virus,etc. Could try these steps:
+                1. Restart browser or computer.
                 2. Turn off fire wall.
                 3. Scan virus.
                 4. Make sure your network card works.
-                
-                After doing these step, can you access network now?
+
+                After  those steps, can you access network now?
                 `
             }
         },
@@ -104,10 +115,10 @@ export const TS_Machine = Machine({
                 [TS_EVENTS.NO]: TS_STATES.NEED_ASSISTANT
             },
             meta: {
-                message: ` Try these steps: 
-1.Check if you forgot to pay the bill. 
+                message: ` Try these steps:
+1.Check if you forgot to pay the bill.
 2.  Restart the computer.
-3. check the IP address Configuration. 
+3. check the IP address Configuration.
 4. Turn off the vpn.
 5. Try replug on modem or replace with new cable.
 
@@ -121,7 +132,8 @@ Did you solve your problem?`
             },
             meta: {
                 message: "Let's now ping gateway account. Can you ping through?",
-                picture: '1.png'
+                //================= 3 张ping网关的图片 todo！！！================
+                picture: 'ping1.png'
             }
         },
 
@@ -158,19 +170,22 @@ Did you solve your problem?`
                 [TS_EVENTS.NO]: TS_STATES.OTHER_CANNOT_CONNECT
             },
             meta: {
-                message: 'Use the ADSL dial method to access internet by log in you user account and password that you carrier provide to you.  Is the problem solved now ? '
+                message: 'Use the ADSL dial method to access internet by log in you user account and password that you carrier provide to you.  Is the problem solved now ? ',
+                //    ===================拨号上网的3 张图片 todo !! dial1.png dial2.png dial3.png===============
+                picture: 'dial1.png'
+
             }
         },
         [TS_STATES.SOLVED]: {
             type: 'final',
             meta: {
-                redirect:'solved'
+                redirect: 'solved'
             }
         },
         [TS_STATES.NEED_ASSISTANT]: {
             type: 'final',
             meta: {
-                redirect:'assistant'
+                redirect: 'assistant'
             }
         }
     },

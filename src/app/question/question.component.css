@@ -1,0 +1,33 @@
+#wrap {
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: #b9d9c5;
+}
+
+#button-list {
+    align-content: center;
+}
+
+img {
+    /* height: 380px; */
+    width: 100%;
+    border: #b9d9c5;
+}
+
+.title {
+    min-height: 100px;
+    max-width: 1000px;
+}
+
+.picture-div {
+    align-content: center;
+    background-color: whitesmoke;
+    width: 500px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+button {
+    color: olivedrab;
+    background-color: mediumseagreen;
+}

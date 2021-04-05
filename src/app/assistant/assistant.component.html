@@ -1,1 +1,37 @@
-<p>assistant works!</p>
+<div id="wrap">
+    <div id="div2">
+        <div id="div2a">
+            <div id="div2aTitle">
+                <h1 style="font-style: initial; color:green;size: 40px">
+                    We will send our staff to fix this problem for you, please fill the form below.
+                </h1>
+            </div>
+        </div>
+        <!--       填表-->
+    </div>
+
+    <div id="div3">
+        <!--    名字 手机 邮箱 -->
+        <div id="div2bbtns">
+            <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+                <div class="inputfield ">
+                    <label>Name:</label>
+                    <input formControlName="name" type="text">
+                </div>
+                <br>
+                <div class="inputfield ">
+                    <label>E-mail:</label>
+                    <input formControlName="email" type="email">
+                </div>
+                <br>
+                <div class="inputfield ">
+                    <label>Phone:</label>
+                    <input formControlName="phonenumber" type="tel">
+                </div>
+                <br>
+                <button id='sub' type="submit ">Submit</button>
+            </form>
+        </div>
+    </div>
+
+</div>

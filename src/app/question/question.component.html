@@ -1,15 +1,21 @@
-<!-- <h2>welcome to my Troubleshooting Workshop! Hope we can solve your problem</h2> -->
+<div id="wrap">
+    <h1 class="title" style="font-style: initial; color: darkred">
+        {{message()}}
+    </h1>
 
-<h2>
-    {{message()}}
-</h2>
+    <div class="picture-div" *ngIf="this.picture()">
+        <img class='picdiv' src="assets/{{this.picture()}}">
+    </div>
+    <div class="picture-div" *ngIf="this.pictures()">
+        <span *ngFor="let pic of this.pictures(); index as i;">
+            <p>Step {{i+1}}</p>
+            <img class='picdiv' src="assets/{{pic.img}}">
+        </span>
+    </div>
 
-<div *ngIf="this.picture()">
-    <img src="assets/{{this.picture()}}" width="600px" height="400px">
+
 </div>
 
-<li *ngFor="let option of this.machine().state.nextEvents; index as i;">
-    <ul>
-        <button mat-button (click)="onclick(option)">{{option}}</button>
-    </ul>
-</li>
+<mat-action-list dense id="button-list" *ngFor="let option of this.machine().state.nextEvents; index as i;">
+    <button mat-list-item (click)="onclick(option)">{{option}}</button>
+</mat-action-list>

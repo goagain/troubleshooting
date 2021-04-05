@@ -1,0 +1,137 @@
+#wrap{
+
+         max-width: 1200px;
+        min-width: 800px;
+        width: 90%;
+        height: 800px;
+        margin: 0 auto;
+        background: #e9e6e2;
+  /*background-repeat: no-repeat;*/
+}
+
+#div1{
+
+    max-width: 1200px;
+    min-width: 800px;
+    height:200px;
+    background: #d46b6b;
+    display: flex;
+    justify-content: center;
+}
+#div2{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    background: whitesmoke;
+    height: 150px;
+    /*为孩子容器设置上下排列*/
+    flex-direction: column;
+
+}
+#div3{
+    height: 300px;
+    max-width: 1200px;
+    background: whitesmoke;
+    justify-content: space-around;
+    /*4个图片显示区域弹性*/
+    flex-direction: column;
+    display: flex;
+
+}
+
+
+.div1a{
+    display:flex;
+	align-items:center;
+	justify-content:center;
+  flex-direction: column;
+  background-image: url('src/assets/logo2.png');
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 200px;
+
+}
+/*logo那个小img*/
+#img1{
+    	/*height:auto;*/
+      /*width: auto;*/
+      height:200px;
+      width: 200px;
+
+}
+.div1b{
+    height:200px;
+    width: 700px;
+    background: #faf8f8;
+
+}
+.div1b1{
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+/*上下排列，问问题的标题*/
+#div2a{
+
+    height: 150px;
+    max-width: 1200px;
+    min-width: 800px;
+  margin-left: 100px;
+  margin-right: 100px;
+
+}
+/*按钮显示*/
+#div2b{
+
+    height: 250px;
+    max-width: 1200px;
+    min-width: 800px;
+
+
+}
+#div2aTitle{
+    height: 100px;
+    max-width: 1000px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+#div2bbtns{
+    max-width: 500px;
+    height: 200px;
+    margin-left: 350px;
+    margin-right: 350px;
+
+}
+
+.picdiv{
+    height: 380px;
+    width: 500px;
+    border: #b9d9c5;
+
+}
+#div3up,#div3down{
+    height: 400px;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+.imgsize{
+    /*图片尺寸随着父div缩放*/
+    width: 100%;
+    height: 100%;
+}
+
+input{
+  height: 20px;
+  width: 300px;
+}
+label{
+  font-size: 20px;
+}
+#sub{
+  width: 100px;
+  height: 20px;
+  margin-left: 150px;
+}

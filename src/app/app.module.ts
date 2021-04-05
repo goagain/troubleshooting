@@ -9,13 +9,21 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { QuestionComponent } from './question/question.component';
 import { SolvedComponent } from './solved/solved.component';
 import { AssistantComponent } from './assistant/assistant.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MapComponent } from './map/map.component';
+import { MatListModule } from '@angular/material/list';
+import { LoginComponent } from './login/login.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     QuestionComponent,
     SolvedComponent,
-    AssistantComponent
+    AssistantComponent,
+    MapComponent,
+    LoginComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -24,6 +32,9 @@ import { AssistantComponent } from './assistant/assistant.component';
     MatButtonModule,
     BrowserAnimationsModule,
     HttpClientJsonpModule,
+    FormsModule,
+    MatListModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

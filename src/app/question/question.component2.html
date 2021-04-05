@@ -1,0 +1,15 @@
+<!-- <h2>welcome to my Troubleshooting Workshop! Hope we can solve your problem</h2> -->
+
+<h2>
+    {{message()}}
+</h2>
+
+<div *ngIf="this.picture()">
+    <img src="assets/{{this.picture()}}">
+</div>
+
+<li *ngFor="let option of this.machine().state.nextEvents; index as i;">
+    <ul>
+        <button mat-button (click)="onclick(option)">{{option}}</button>
+    </ul>
+</li>

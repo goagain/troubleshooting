@@ -1,0 +1,65 @@
+<p>dashboard works!</p>
+
+<table>
+    <thead>
+        <td>Name</td>
+        <td>Phone Number</td>
+        <td>Email</td>
+        <td>Status</td>
+        <td>Action</td>
+    </thead>
+    <tbody id="button-list" *ngFor="let item of this.list; index as i;">
+        <tr>
+            <td>
+                {{item.name}}
+            </td>
+            <td>
+                {{item.phoneNumber}}
+            </td>
+            <td>
+                {{item.email}}
+            </td>
+            <td>
+                <div [ngSwitch]="item.state">
+                    <span *ngSwitchCase="0">Unread</span>
+                    <span *ngSwitchCase="1">Processing</span>
+                    <span *ngSwitchCase="2">Solved</span>
+                    <span *ngSwitchCase="3">Rejected</span>
+                </div>
+            </td>
+            <td>
+                <div [ngSwitch]="item.state">
+                    <span *ngSwitchCase="0">
+                        <button>
+                            Process
+                        </button>
+                        <button (click)="reject(i)">
+                            Reject
+                        </button>
+                    </span>
+                    <span *ngSwitchCase="1">
+                        <button (click)="solved(i)">
+                            Mark As Solved
+                        </button>
+                        <button (click)="reject(i)">
+                            Reject
+                        </button>
+                    </span>
+                    <span *ngSwitchCase="2">
+                        <button (click)="processing(i)">
+                            Mark As Processing
+                        </button>
+                    </span>
+                    <span *ngSwitchCase="3">
+                        <button (click)="processing(i)">
+                            Mark As Processing
+                        </button>
+                    </span>
+
+                </div>
+
+            </td>
+        </tr>
+        <!-- <button mat-list-item>{{item}}</button> -->
+    </tbody>
+</table>

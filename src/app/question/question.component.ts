@@ -19,22 +19,27 @@ export class QuestionComponent implements OnInit {
   picture() {
     let meta = this.mergeMeta(this.machine().state.meta)
     return meta['picture']
-
   }
+
+  pictures() {
+    let meta = this.mergeMeta(this.machine().state.meta)
+    return meta['pictures'];
+  }
+
   mergeMeta(meta:any): any{
     if (!meta){
       return {}
     }
     return Object.keys(meta).reduce((acc, key) => {
       const value = meta[key];
-  
+
       // Assuming each meta value is an object
       Object.assign(acc, value);
-  
+
       return acc;
     }, {});
   }
-  
+
   ngOnInit(): void {
     console.log(this.machine().state)
   }
