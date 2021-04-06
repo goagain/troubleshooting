@@ -33,18 +33,7 @@ export const TS_Machine = Machine({
                 [TS_EVENTS.CONFIRM]: TS_STATES.ETHERNET_OR_WIFI
             },
             meta: {
-                message: 'Welcome to Network TroubleShooting System, hope we can solve your problem.',
-                pictures: [
-                    {
-                        img: "1.png"
-                    },
-                    {
-                        img: "1.png"
-                    }, 
-                    {
-                        img: "1.png"
-                    },
-                ]
+                message: 'Welcome to Network TroubleShooting System, hope we can solve your problem.'
             }
         },
         [TS_STATES.ETHERNET_OR_WIFI]: {
@@ -133,7 +122,7 @@ Did you solve your problem?`
             meta: {
                 message: "Let's now ping gateway account. Can you ping through?",
                 //================= 3 张ping网关的图片 todo！！！================
-                picture: 'ping1.png'
+                pictures: ['ping1.png', 'ping2.png', 'ping3.png']
             }
         },
 
@@ -172,7 +161,7 @@ Did you solve your problem?`
             meta: {
                 message: 'Use the ADSL dial method to access internet by log in you user account and password that you carrier provide to you.  Is the problem solved now ? ',
                 //    ===================拨号上网的3 张图片 todo !! dial1.png dial2.png dial3.png===============
-                picture: 'dial1.png'
+                pictures: ['dial1.png', 'dial2.png', 'dial3.png']
 
             }
         },
