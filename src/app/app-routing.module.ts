@@ -4,7 +4,6 @@ import { AppComponent } from './app.component';
 import { AssistantComponent } from './assistant/assistant.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
-import { MapComponent } from './map/map.component';
 import { QuestionComponent } from './question/question.component';
 import { SolvedComponent } from './solved/solved.component';
 
@@ -12,7 +11,6 @@ const routes: Routes = [
   { path: '', component: QuestionComponent },
   { path: 'solved', component: SolvedComponent },
   { path: 'assistant', component: AssistantComponent },
-  { path: 'map', component: MapComponent },
   { path: 'login', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent }
 ];

@@ -60,7 +60,8 @@ export const TS_Machine = Machine({
                 [TS_EVENTS.NO]: TS_STATES.COMPUTER_PROBLEM,
             },
             meta: {
-                message: 'Well, seems you have a problem with the Enthernet cable, please try to unplug and plug the cable,if this doesn\'t work, try a new cable. Can you access the internet now?'
+                message: 'Well, seems you have a problem with the Enthernet cable, please try to unplug and plug the cable,if this doesn\'t work, try a new cable. Can you access the internet now?',
+                picture: '1.png'
             }
         },
         [TS_STATES.COMPUTER_PROBLEM]: {

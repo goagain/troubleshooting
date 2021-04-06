@@ -21,7 +21,6 @@
     "@angular/platform-browser": "~11.1.1",
     "@angular/platform-browser-dynamic": "~11.1.1",
     "@angular/router": "~11.1.1",
-    "ol": "^6.5.0",
     "tslib": "^2.0.0",
     "xstate": "^4.17.0",
     "zone.js": "~0.11.3"
