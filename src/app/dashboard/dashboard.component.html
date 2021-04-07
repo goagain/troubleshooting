@@ -30,7 +30,7 @@
             <td>
                 <div [ngSwitch]="item.state">
                     <span *ngSwitchCase="0">
-                        <button>
+                        <button (click)="processing(i)">
                             Process
                         </button>
                         <button (click)="reject(i)">
